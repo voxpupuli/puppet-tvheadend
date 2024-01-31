@@ -1,5 +1,5 @@
 class tvheadend (
-  Enum['release','stable','unstable','obsolete'] $release = 'stable',
+  Enum['release','stable','unstable','obsolete','stable-4.2'] $release = 'stable',
   String $distribution = $facts['os']['distro']['codename'],
   String $user = 'hts',
   String $home = '/var/lib/hts',
