@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'tvheadend' do
@@ -25,6 +27,7 @@ describe 'tvheadend' do
       it { is_expected.to contain_shellvar('TVH_USER').with_target('/etc/default/tvheadend') }
       it { is_expected.to contain_shellvar('TVH_GROUP').with_value('hts') }
       it { is_expected.to contain_shellvar('TVH_GROUP').with_target('/etc/default/tvheadend') }
+
       context 'with all parameters set' do
         let(:params) do
           {

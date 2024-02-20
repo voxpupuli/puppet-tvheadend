@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper_acceptance'
 
 describe 'tvheadend class' do
@@ -15,6 +17,7 @@ describe 'tvheadend class' do
       apply_manifest(pp, catch_failures: true)
       apply_manifest(pp, catch_changes: true)
     end
+
     describe service('tvheadend') do
       it { is_expected.to be_enabled }
       it { is_expected.to be_running }
